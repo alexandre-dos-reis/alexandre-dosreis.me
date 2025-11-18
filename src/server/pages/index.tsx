@@ -4,12 +4,14 @@ import finishers from "@/server/assets/finishers.jpg";
 import up from "@/server/assets/univers-paie.jpg";
 import gilleAgri from "@/server/assets/gille-agri.fr.png";
 import { setPageContext } from "@/server/context";
-import { TagTech } from "../components/TagTech";
 import { Link } from "../components/Link";
 import { JobCard } from "../components/JobCard";
+import { TechStack } from "../components/TechStack";
+
+import { tags as techStack } from "client:script/tech-stack";
 
 export default () => {
-  setPageContext({ title: "Accueil" });
+  setPageContext({ title: "Accueil", headTags: [techStack] });
 
   const socialLinks = [
     {
@@ -100,34 +102,7 @@ export default () => {
       </section>
       <section>
         <h2>Les technos 👨‍💻</h2>
-        <p>Actuellement les technos que je privilégie sont:</p>
-        <p class="flex flex-wrap gap-y-2 mb-8">
-          <TagTech>Neovim</TagTech>
-          <TagTech>NodeJS</TagTech>
-          <TagTech>Bun</TagTech>
-          <TagTech>React</TagTech>
-          <TagTech>NextJS</TagTech>
-          <TagTech>Typescript</TagTech>
-          <TagTech>tRPC</TagTech>
-          <TagTech>Docker</TagTech>
-          <TagTech>PostGreSQL</TagTech>
-          <TagTech>Nix</TagTech>
-          <TagTech>Ghostty</TagTech>
-          <TagTech>Tmux</TagTech>
-          <TagTech>Directus</TagTech>
-          <TagTech>Caddy</TagTech>
-          <TagTech>Plausible</TagTech>
-        </p>
-        <p>Mais je connais aussi:</p>
-        <p class="flex flex-wrap gap-y-2 mb-8">
-          <TagTech>GraphQL</TagTech>
-          <TagTech>Astro</TagTech>
-          <TagTech>Dotnet</TagTech>
-          <TagTech>Angular</TagTech>
-          <TagTech>Sql Server</TagTech>
-          <TagTech>Symfony</TagTech>
-          <TagTech>VSCode</TagTech>
-        </p>
+        <TechStack />
       </section>
       <section>
         <h2>Mes derniers jobs 🏬</h2>
