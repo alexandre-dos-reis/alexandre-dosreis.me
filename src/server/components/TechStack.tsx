@@ -12,7 +12,7 @@ const categories = [
   "ORM",
   "DevOps",
   "Outils",
-  "Autres",
+  // "Autres",
 ] as const;
 
 type Tech = {
